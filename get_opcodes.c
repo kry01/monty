@@ -9,7 +9,7 @@
  */
 void (*op_getter(char *opc))(stack_t **stack, unsigned int line_number)
 {
-	insc_t instruct[] = {
+	instruction_t instruct[] = {
 		{"push", my_push},
 		{"pall", my_pall},
 		{"pint", my_pint},

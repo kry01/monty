@@ -59,11 +59,11 @@ typedef struct instruction_s
 {
 	char *opcode;
 	void (*f)(stack_t **stack, unsigned int line_number);
-} insc_t;
+} instruction_t;
 
 extern global_t vglo;
 
-/* opcode_instructuions*/
+
 void my_push(stack_t **stack, unsigned int line_number);
 void my_pall(stack_t **stack, unsigned int line_number);
 void my_pint(stack_t **doubly, unsigned int cline);
@@ -82,22 +82,22 @@ void my_pstr(stack_t **doubly, unsigned int cline);
 void my_rotl(stack_t **doubly, unsigned int cline);
 void my_rotr(stack_t **doubly, unsigned int cline);
 
-/*get function*/
+
 void (*op_getter(char *opc))(stack_t **stack, unsigned int line_number);
 
-/*imported functions*/
+
 int _sch(char *s, char c);
 char *_strtoky(char *s, char *d);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 void *_calloc(unsigned int nmemb, unsigned int size);
 int _strcmp(char *s1, char *s2);
 
-/* doubly linked list functions */
+
 stack_t *node_adder_end(stack_t **head, const int n);
 stack_t *node_adder_front(stack_t **head, const int n);
 void list_freer(stack_t *head);
 
-/* main */
+
 void vl_freer(void);
 
 #endif
