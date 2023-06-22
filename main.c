@@ -82,7 +82,7 @@ int main(int argc, char *argv[])
 		lines[0] = _strtoky(vglo.buffer, " \t\n");
 		if (lines[0] && lines[0][0] != '#')
 		{
-			f = get_opcodes(lines[0]);
+			f = op_getter(lines[0]);
 			if (!f)
 			{
 				dprintf(2, "L%u: ", vglo.cont);

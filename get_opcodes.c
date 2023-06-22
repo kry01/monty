@@ -1,13 +1,13 @@
 #include "monty.h"
 
 /**
- * get_opcodes - selects the correct opcode to perform
+ * op_getter - selects the correct opcode to perform
  *
  * @opc: opcode passed
  *
  * Return: pointer to the function that executes the opcode
  */
-void (*get_opcodes(char *opc))(stack_t **stack, unsigned int line_number)
+void (*op_getter(char *opc))(stack_t **stack, unsigned int line_number)
 {
 	insc_t instruct[] = {
 		{"push", my_push},
