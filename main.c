@@ -9,7 +9,7 @@ global_t vglo;
  */
 void free_vglo(void)
 {
-	free_dlistint(vglo.head);
+	list_freer(vglo.head);
 	free(vglo.buffer);
 	fclose(vglo.fd);
 }

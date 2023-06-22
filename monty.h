@@ -93,9 +93,9 @@ void *_calloc(unsigned int nmemb, unsigned int size);
 int _strcmp(char *s1, char *s2);
 
 /* doubly linked list functions */
-stack_t *add_dnodeint_end(stack_t **head, const int n);
-stack_t *add_dnodeint(stack_t **head, const int n);
-void free_dlistint(stack_t *head);
+stack_t *node_adder_end(stack_t **head, const int n);
+stack_t *node_adder_front(stack_t **head, const int n);
+void list_freer(stack_t *head);
 
 /* main */
 void free_vglo(void);
