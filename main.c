@@ -3,7 +3,7 @@
 global_t vglo;
 
 /**
- * vl_freer - frees the global variables
+ * vl_freer - frees the vars.
  *
  * Return: no return
  */
@@ -15,7 +15,7 @@ void vl_freer(void)
 }
 
 /**
- * start_vglo - initializes the global variables
+ * start_vglo - initializes vars.
  *
  * @fd: file descriptor
  * Return: no return
@@ -31,12 +31,11 @@ void start_vglo(FILE *fd)
 }
 
 /**
- * check_input - checks if the file exists and if the file can
- * be opened
+ * check_input - checks if the input is full or not.
  *
- * @argc: argument count
- * @argv: argument vector
- * Return: file struct
+ * @argc: argument count.
+ * @argv: argument value.
+ * Return: 0 or value.
  */
 FILE *check_input(int argc, char *argv[])
 {
@@ -60,10 +59,10 @@ FILE *check_input(int argc, char *argv[])
 }
 
 /**
- * main - Entry point
+ * main - The main func.
  *
  * @argc: argument count
- * @argv: argument vector
+ * @argv: argument value.
  * Return: 0 on success
  */
 int main(int argc, char *argv[])

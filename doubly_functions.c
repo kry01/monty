@@ -1,10 +1,10 @@
 #include "monty.h"
 
 /**
- *node_adder_end - add a note at the end of the doubly link list
- *@head: first position of linked list
- *@n: data to store
- *Return: a doubly linked list
+ *node_adder_end - add node at the end
+ *@head: head node
+ *@n: int data
+ *Return: head node
  */
 stack_t *node_adder_end(stack_t **head, const int n)
 {
@@ -38,10 +38,10 @@ stack_t *node_adder_end(stack_t **head, const int n)
 }
 
 /**
- *node_adder_front - add a note at the begining of the doubly link list
- *@head: first position of linked list
- *@n: data to store
- *Return: a doubly linked list
+ *node_adder_front - add node at the front of the list.
+ *@head:  head node
+ *@n: data as int.
+ *Return:  head node
  */
 stack_t *node_adder_front(stack_t **head, const int n)
 {
@@ -73,10 +73,10 @@ stack_t *node_adder_front(stack_t **head, const int n)
 }
 
 /**
- * list_freer - frees the doubly linked list
+ * list_freer - free lists.
  *
- * @head: head of the list
- * Return: no return
+ * @head:  head node
+ * Return: 0
  */
 void list_freer(stack_t *head)
 {
