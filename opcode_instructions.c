@@ -15,7 +15,7 @@ void my_push(stack_t **doubly, unsigned int cline)
 	{
 		dprintf(2, "L%u: ", cline);
 		dprintf(2, "usage: push integer\n");
-		free_vglo();
+		vl_freer();
 		exit(EXIT_FAILURE);
 	}
 
@@ -25,7 +25,7 @@ void my_push(stack_t **doubly, unsigned int cline)
 		{
 			dprintf(2, "L%u: ", cline);
 			dprintf(2, "usage: push integer\n");
-			free_vglo();
+			vl_freer();
 			exit(EXIT_FAILURE);
 		}
 	}
@@ -74,7 +74,7 @@ void my_pint(stack_t **doubly, unsigned int cline)
 	{
 		dprintf(2, "L%u: ", cline);
 		dprintf(2, "can't pint, stack empty\n");
-		free_vglo();
+		vl_freer();
 		exit(EXIT_FAILURE);
 	}
 
@@ -95,7 +95,7 @@ void my_pop(stack_t **doubly, unsigned int cline)
 	if (doubly == NULL || *doubly == NULL)
 	{
 		dprintf(2, "L%u: can't pop an empty stack\n", cline);
-		free_vglo();
+		vl_freer();
 		exit(EXIT_FAILURE);
 	}
 	aux = *doubly;
@@ -123,7 +123,7 @@ void my_swap(stack_t **doubly, unsigned int cline)
 	if (m < 2)
 	{
 		dprintf(2, "L%u: can't swap, stack too short\n", cline);
-		free_vglo();
+		vl_freer();
 		exit(EXIT_FAILURE);
 	}
 

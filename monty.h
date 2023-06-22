@@ -98,6 +98,6 @@ stack_t *node_adder_front(stack_t **head, const int n);
 void list_freer(stack_t *head);
 
 /* main */
-void free_vglo(void);
+void vl_freer(void);
 
 #endif

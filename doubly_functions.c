@@ -16,7 +16,7 @@ stack_t *node_adder_end(stack_t **head, const int n)
 	if (!temp)
 	{
 		dprintf(2, "Error: malloc failed\n");
-		free_vglo();
+		vl_freer();
 		exit(EXIT_FAILURE);
 	}
 	temp->n = n;
@@ -53,7 +53,7 @@ stack_t *node_adder_front(stack_t **head, const int n)
 	if (!temp)
 	{
 		dprintf(2, "Error: malloc failed\n");
-		free_vglo();
+		vl_freer();
 		exit(EXIT_FAILURE);
 	}
 	temp->n = n;

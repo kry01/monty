@@ -3,11 +3,11 @@
 global_t vglo;
 
 /**
- * free_vglo - frees the global variables
+ * vl_freer - frees the global variables
  *
  * Return: no return
  */
-void free_vglo(void)
+void vl_freer(void)
 {
 	list_freer(vglo.head);
 	free(vglo.buffer);
@@ -87,7 +87,7 @@ int main(int argc, char *argv[])
 			{
 				dprintf(2, "L%u: ", vglo.cont);
 				dprintf(2, "unknown instruction %s\n", lines[0]);
-				free_vglo();
+				vl_freer();
 				exit(EXIT_FAILURE);
 			}
 			vglo.arg = _strtoky(NULL, " \t\n");
@@ -97,7 +97,7 @@ int main(int argc, char *argv[])
 		vglo.cont++;
 	}
 
-	free_vglo();
+	vl_freer();
 
 	return (0);
 }

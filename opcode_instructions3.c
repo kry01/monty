@@ -20,14 +20,14 @@ void my_div(stack_t **doubly, unsigned int cline)
 	if (m < 2)
 	{
 		dprintf(2, "L%u: can't div, stack too short\n", cline);
-		free_vglo();
+		vl_freer();
 		exit(EXIT_FAILURE);
 	}
 
 	if ((*doubly)->n == 0)
 	{
 		dprintf(2, "L%u: division by zero\n", cline);
-		free_vglo();
+		vl_freer();
 		exit(EXIT_FAILURE);
 	}
 
@@ -56,7 +56,7 @@ void my_mul(stack_t **doubly, unsigned int cline)
 	if (m < 2)
 	{
 		dprintf(2, "L%u: can't mul, stack too short\n", cline);
-		free_vglo();
+		vl_freer();
 		exit(EXIT_FAILURE);
 	}
 
@@ -86,14 +86,14 @@ void my_mod(stack_t **doubly, unsigned int cline)
 	if (m < 2)
 	{
 		dprintf(2, "L%u: can't mod, stack too short\n", cline);
-		free_vglo();
+		vl_freer();
 		exit(EXIT_FAILURE);
 	}
 
 	if ((*doubly)->n == 0)
 	{
 		dprintf(2, "L%u: division by zero\n", cline);
-		free_vglo();
+		vl_freer();
 		exit(EXIT_FAILURE);
 	}
 
@@ -113,13 +113,13 @@ void my_pchar(stack_t **doubly, unsigned int cline)
 	if (doubly == NULL || *doubly == NULL)
 	{
 		dprintf(2, "L%u: can't pchar, stack empty\n", cline);
-		free_vglo();
+		vl_freer();
 		exit(EXIT_FAILURE);
 	}
 	if ((*doubly)->n < 0 || (*doubly)->n >= 128)
 	{
 		dprintf(2, "L%u: can't pchar, value out of range\n", cline);
-		free_vglo();
+		vl_freer();
 		exit(EXIT_FAILURE);
 	}
 	printf("%c\n", (*doubly)->n);
